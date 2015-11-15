@@ -1,2 +1,2 @@
-[$HOME/.config/vcsh/repo.d/mr.git]
-checkout = vcsh clone git@github.com:altercation/dotfiles-mr.git
+[$HOME/.config/vcsh/repo.d/vim.git]
+checkout = vcsh clone git@github.com:altercation/dotfiles-vim.git vim
