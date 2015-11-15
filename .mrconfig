@@ -2,4 +2,4 @@
 git_gc = git gc "$@"
 jobs = 5
 
-include = cat ~/.mr.d/active/*
+include = cat ~/.mr/active/*
