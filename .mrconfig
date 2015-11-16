@@ -27,7 +27,7 @@ lib =
 			vcsh clone https://github.com/altercation/dotfiles-${1}.git ${1}
 			vcsh ${1} remote set-url --push origin git@github.com:altercation/dotfiles-${1}.git
 		else
-			vcsh clone ssh://git@github.com:altercation/dotfiles-${1}.git ${1}
+			vcsh clone git@github.com:altercation/dotfiles-${1}.git ${1}
 		fi
 	}
 	full() {
