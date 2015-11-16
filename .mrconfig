@@ -18,7 +18,7 @@ lib =
 	}
 	smart_vcsh_clone() {
 		if anon; then
-			vcsh clone git://git@github.com:altercation/dotfiles-${1}.git ${1}
+			vcsh clone https://github.com/altercation/dotfiles-${1}.git ${1}
 		else
 			vcsh clone ssh://git@github.com:altercation/dotfiles-${1}.git ${1}
 		fi
