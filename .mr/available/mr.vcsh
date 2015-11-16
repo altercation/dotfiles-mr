@@ -1,3 +1,8 @@
 [$HOME/.config/vcsh/repo.d/mr.git]
-checkout = dotfiles_checkout mr
-setpush = vcsh mr remote set-url --add --push origin git@github.com:altercation/dotfiles-mr.git 
+checkout =	dotfiles_checkout mr
+setup =
+		vcsh mr remote set-url --add --push origin git@github.com:altercation/dotfiles-mr.git 
+		# used on new system setup
+		mkdir -p "$HOME/.ssh"
+		ssh-keyscan github.com > "$HOME/.ssh/known_hosts"
+		ssh-keygen
