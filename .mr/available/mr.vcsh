@@ -3,6 +3,5 @@ checkout =	dotfiles_checkout mr
 setup =
 		vcsh mr remote set-url --add --push origin git@github.com:altercation/dotfiles-mr.git 
 		# used on new system setup
-		mkdir -p "$HOME/.ssh"
+		[ -f "$HOME/.ssh/id_rsa" ] || ssh-keygen -f "$HOME/.ssh/id_rsa"
 		ssh-keyscan github.com > "$HOME/.ssh/known_hosts"
-		ssh-keygen
