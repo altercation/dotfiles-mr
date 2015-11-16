@@ -1,7 +1,2 @@
 [$HOME/.config/vcsh/repo.d/gnome.git]
-checkout =
-	if anon; then
-		vcsh clone git://git@github.com:altercation/dotfiles-gnome.git gnome
-	else
-		vcsh clone ssh://git@github.com:altercation/dotfiles-gnome.git gnome
-	fi
+checkout = smart_vcsh_clone gnome

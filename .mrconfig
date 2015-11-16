@@ -16,6 +16,13 @@ lib =
 			return 1
 		fi
 	}
+	smart_vcsh_clone() {
+		if anon; then
+			vcsh clone git://git@github.com:altercation/dotfiles-${1}.git ${1}
+		else
+			vcsh clone ssh://git@github.com:altercation/dotfiles-${1}.git ${1}
+		fi
+	}
 	full() {
 		test "$whoami" = $myusername && ! anon
 	}
