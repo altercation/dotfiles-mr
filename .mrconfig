@@ -2,4 +2,39 @@
 git_gc = git gc "$@"
 jobs = 5
 
+lib = 
+        myusername="es"
+        mylaptopname="naptime"
+	hostname="$(hostname)"
+	whoami="$(whoami)"
+	anon() {
+		ssh -T git@github.com &>/dev/null
+		if [ $? -gt 1 ]; then
+			# failed to authenticate, so anon mode
+			return 0
+		else
+			return 1
+		fi
+	}
+	full() {
+		test "$whoami" = $myusername && ! anon
+	}
+	on() {
+		for host in $@; do
+			if [ "${host%@*}" != "${host#*@}" ]; then
+				if [ "$whoami" != "${host%@*}" ]; then
+					continue
+				fi
+				host="${host#*@}"
+			fi
+			if [ "$hostname" = "$host" ]; then
+				return 0
+			fi
+		done
+		return 1
+	}
+	mylaptop() {
+		on ${myusername}@${mylaptopname}
+	}
+
 include = cat ~/.mr/active/*

@@ -1,2 +1,7 @@
 [$HOME/.config/vcsh/repo.d/mr.git]
-checkout = vcsh clone git@github.com:altercation/dotfiles-mr.git mr
+checkout =
+	if anon; then
+		vcsh clone git://git@github.com:altercation/dotfiles-mr.git mr
+	else
+		vcsh clone ssh://git@github.com:altercation/dotfiles-mr.git mr
+	fi
