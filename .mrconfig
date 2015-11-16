@@ -1,3 +1,6 @@
+# .mrconfig
+# Ethan Schoonover <es@ethanschoonover.com>
+
 [DEFAULT]
 git_gc = git gc "$@"
 jobs = 5
