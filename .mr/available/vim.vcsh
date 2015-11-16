@@ -1,2 +1,2 @@
 [$HOME/.config/vcsh/repo.d/vim.git]
-checkout = smart_vcsh_clone vim
+checkout = dotfiles_checkout vim

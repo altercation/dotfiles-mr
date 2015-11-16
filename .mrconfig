@@ -22,7 +22,7 @@ lib =
 	# all dotfiles cloned in similar manner with standard naming convention
 	# so we handle this with a function that allows anonymous checkout of
 	# the public repos if ssh hasn't been configured with github yet
-	dotfile_clone() {
+	dotfile_checkout() {
 		if anon; then
 			vcsh clone https://github.com/altercation/dotfiles-${1}.git ${1}
 			vcsh ${1} remote set-url --push origin ssh://git@github.com:altercation/dotfiles-${1}.git

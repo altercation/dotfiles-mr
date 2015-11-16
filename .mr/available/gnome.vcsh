@@ -1,2 +1,2 @@
 [$HOME/.config/vcsh/repo.d/gnome.git]
-checkout = smart_vcsh_clone gnome
+checkout = dotfiles_checkout gnome

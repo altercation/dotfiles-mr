@@ -1,2 +1,2 @@
 [$HOME/.config/vcsh/repo.d/shell.git]
-checkout = smart_vcsh_clone shell
+checkout = dotfiles_checkout shell
