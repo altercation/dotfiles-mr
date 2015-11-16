@@ -25,7 +25,7 @@ lib =
 	dotfiles_checkout() {
 		if anon; then
 			vcsh clone https://github.com/altercation/dotfiles-${1}.git ${1}
-			vcsh ${1} remote set-url --push origin ssh://git@github.com:altercation/dotfiles-${1}.git
+			vcsh ${1} remote set-url --push origin git@github.com:altercation/dotfiles-${1}.git
 		else
 			vcsh clone ssh://git@github.com:altercation/dotfiles-${1}.git ${1}
 		fi
