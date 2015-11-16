@@ -3,5 +3,7 @@ checkout =	dotfiles_checkout mr
 setup =
 		vcsh mr remote set-url --add --push origin git@github.com:altercation/dotfiles-mr.git 
 		# used on new system setup
+		echo -e "\nCreate an ssh key:\n"
 		[ -f "$HOME/.ssh/id_rsa" ] || ssh-keygen -f "$HOME/.ssh/id_rsa"
 		ssh-keyscan github.com > "$HOME/.ssh/known_hosts"
+		echo -e "\nPublic ssh key for use on github:\n"
