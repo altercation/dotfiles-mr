@@ -1,0 +1,2 @@
+[$HOME/.config/vcsh/repo.d/desktop.git]
+checkout = dotfiles_checkout desktop
