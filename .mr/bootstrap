@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# call with 'curl -LO http://ejas.net/mr'
+
 cd
 vcsh clone https://github.com/altercation/dotfiles-mr.git mr
 echo "'mr setup' to grab github key for knownhosts & gen new ssh keys"
